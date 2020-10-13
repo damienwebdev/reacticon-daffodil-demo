@@ -1,0 +1,20 @@
+<form [formGroup]="formGroup" class="contact-form" (submit)="submit()">
+    <mat-form-field class="contact-form__name">
+        <mat-label for="contact-form-name">Name</mat-label>
+        <input matInput formControlName="name" type="text" name="name" id="contact-form-name" autocomplete="name"/>
+        <mat-error *ngIf="formGroup.controls.name.invalid">Name is required.</mat-error>
+    </mat-form-field>
+    <mat-form-field class="contact-form__email">
+        <mat-label for="contact-form-email">Email</mat-label>
+        <input matInput formControlName="email" type="text" name="email" id="contact-form-email"/>
+        <mat-error *ngIf="formGroup.controls.email.invalid">Email is required.</mat-error>
+    </mat-form-field>
+    <mat-form-field class="contact-form__message">
+        <mat-label for="contact-form-message">Message</mat-label>
+        <input matInput formControlName="message" type="textarea" name="message" id="contact-form-message"/>
+        <mat-error *ngIf="formGroup.controls.message.invalid">Message is required.</mat-error>
+    </mat-form-field>
+    <div class="contact-form__button">
+        <button mat-raised-button color="primary" type="submit" >Submit</button>
+    </div>
+</form>

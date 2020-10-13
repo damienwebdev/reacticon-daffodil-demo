@@ -1,1 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import 'theme';
+
+$config: mat-get-color-config($theme);
+$foreground: map-get($config, foreground);
+$foreGroundFontColor: map-get($foreground, text);
+
+$background: map-get($config, background);
+$backgroundColor: map-get($background, background);
+html, body { height: 100%;  }
+body { 
+    margin: 0; 
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    background: $backgroundColor;
+    color: $foreGroundFontColor;
+}

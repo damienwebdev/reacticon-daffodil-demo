@@ -1,0 +1,20 @@
+.contact-form {
+    display: flex;
+    flex-wrap: wrap;
+
+    &__name, &__email, &__message, &__button {
+        margin: 10px;
+    }
+
+    &__name {
+        flex-basis: calc(50% - 20px);
+    }
+
+    &__email {
+        flex-basis: calc(50% - 20px);
+    }
+
+    &__message {
+        width: 100%;
+    }
+}
